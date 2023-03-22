@@ -1,6 +1,6 @@
 from flask import Flask, request
 from resources import EntryManager, Entry
-from todo_project.controls.utils import resource
+# from todo_project.controls.utils import resource
 import os
 
 app = Flask(__name__)
@@ -77,6 +77,7 @@ def delete_entry():
     return {'status': 'error', 'message': 'Entry not found'}
 
 
+# if uses utils
 # FOLDER = resource("todo_list")
 here = os.path.abspath(os.path.dirname(__file__))
 FOLDER = os.path.join(here, '..', 'todo_list')
