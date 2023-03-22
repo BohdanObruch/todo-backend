@@ -1,0 +1,1 @@
+The Todo application backend project is written in Python + Flask
