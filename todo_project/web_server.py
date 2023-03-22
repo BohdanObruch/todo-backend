@@ -80,7 +80,8 @@ def delete_entry():
 # FOLDER = resource("todo_list")
 here = os.path.abspath(os.path.dirname(__file__))
 FOLDER = os.path.join(here, '..', 'todo_list')
-
+if not os.path.isdir(FOLDER):
+    os.makedirs(FOLDER)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000, debug=False)
